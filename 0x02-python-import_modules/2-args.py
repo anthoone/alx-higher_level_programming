@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    a = len(sys.argv)
+    arg = sys.argv
+    a = len(arg)
     dote = ['.', ':']
     if a == 1:
         dote = dote[0]
@@ -15,6 +16,6 @@ if __name__ == "__main__":
         except NameError:
             pass
     print("{} argument{}{}".format(a-1, s if 's' in locals() else '', dote))
-    
+ 
     for index, item in enumerate(sys.argv[1:]):
         print("{}: {}".format(index+1, item))
