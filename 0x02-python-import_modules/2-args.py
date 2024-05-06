@@ -2,20 +2,20 @@
 if __name__ == "__main__":
     import sys
     arg = sys.argv
-    a = len(arg)
+    size = len(arg) - 1
     dote = ['.', ':']
-    if a == 1:
+    if size == 0:
         dote = dote[0]
-    elif a >= 2:
+    elif size >= 1:
         dote = dote[1]
-    if a == 1 or a > 2: 
+    if size == 0 or size >= 2: 
         s = 's'
-    elif a == 2:
+    elif size == 1:
         try:
             del s
         except NameError:
             pass
-    print("{} argument{}{}".format(a-1, s if 's' in locals() else '', dote))
+    print("{} argument{}{}".format(size, s if 's' in locals() else '', dote))
  
-    for index, item in enumerate(sys.argv[1:]):
-        print("{}: {}".format(index+1, item))
+    for i in range(1, size + 1):
+        print("{}: {}".format(i, arg[i]))
