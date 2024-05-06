@@ -14,7 +14,7 @@ if __name__ == "__main__":
             del s
         except NameError:
             pass
-    print("{} argument{}{}".format(a-1, s if 's' in locals() else '',, dote))
+    print("{} argument{}{}".format(a-1, s if 's' in locals() else '', dote))
     
     for index, item in enumerate(sys.argv[1:]):
         print("{}: {}".format(index+1, item))
