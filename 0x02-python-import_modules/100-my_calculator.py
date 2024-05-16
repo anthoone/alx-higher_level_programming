@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-import sys
-
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
 
     action = [add, sub, mul, div]
-    arg = sys.argv
+    arg = argv
     size = len(arg) - 1
 
     operators = ['+', '-', '*', '/']
