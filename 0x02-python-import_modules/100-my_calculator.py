@@ -5,6 +5,7 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
 
+    action = [add, sub, mul, div]
     arg = sys.argv
     size = len(arg) - 1
 
@@ -27,7 +28,7 @@ if __name__ == "__main__":
             action = mul
         elif operator == '/':
             action = div
-        print("{} {} {} = {}".format(a, operator, b, action(a, b)))
+        print("{:d} {:s} {:d} = {:d}".format(a, operator, b, action(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
