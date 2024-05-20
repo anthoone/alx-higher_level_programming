@@ -10,15 +10,3 @@ matrix = [
 print_matrix_integer(matrix)
 print("--")
 print_matrix_integer()
-
-''' 
-
-guillaume@ubuntu:~/0x03$ ./6-main.py | cat -e
-1 2 3$
-4 5 6$
-7 8 9$
---$
-$
-guillaume@ubuntu:~/0x03$ 
-
-'''
