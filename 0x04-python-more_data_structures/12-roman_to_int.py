@@ -20,4 +20,4 @@ def roman_to_int(roman_string: str) -> int:
         else:
             output += lookup[roman_string[i]]
             i -= 1
-    return (output)
+    return output
