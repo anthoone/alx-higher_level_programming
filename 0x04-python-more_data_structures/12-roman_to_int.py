@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string: str) -> int:
+def roman_to_int(roman_string):
     lookup = {
         "I": 1,
         "V": 5,
