@@ -16,8 +16,7 @@ def roman_to_int(roman_string: str) -> int:
     while i >= 0:
         if i < N - 1 and lookup[roman_string[i]] < lookup[roman_string[i + 1]]:
             output -= lookup[roman_string[i]]
-            i -= 1
         else:
             output += lookup[roman_string[i]]
-            i -= 1
+        i -= 1
     return output
