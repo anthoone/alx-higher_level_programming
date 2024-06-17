@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string):
+def roman_to_int(roman_string: str) -> int:
     lookup = {
         "I": 1,
         "V": 5,
@@ -9,6 +9,7 @@ def roman_to_int(roman_string):
         "D": 500,
         "M" : 1000,
     }
+
     if not roman_string or not isinstance(roman_string, str):
         return 0
     N = len(roman_string)
@@ -20,4 +21,4 @@ def roman_to_int(roman_string):
         else:
             output += lookup[roman_string[i]]
         i -= 1
-    return (output)
+    return output
