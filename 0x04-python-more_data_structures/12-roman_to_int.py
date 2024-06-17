@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string: str) -> int:
-    lookup = {
+def roman_to_int(roman_string):
+    roman_dic = {
         "I": 1,
         "V": 5,
         "X": 10,
@@ -15,12 +15,12 @@ def roman_to_int(roman_string: str) -> int:
 
     N = len(roman_string)
     i = N - 1
-    output = 0
+    roman_int = 0
 
     while i >= 0:
-        if i < N - 1 and lookup[roman_string[i]] < lookup[roman_string[i + 1]]:
-            output -= lookup[roman_string[i]]
+        if i < N - 1 and roman_dic[roman_string[i]] < roman_dic[roman_string[i + 1]]:
+            roman_int -= roman_dic[roman_string[i]]
         else:
-            output += lookup[roman_string[i]]
+            roman_int += roman_dic[roman_string[i]]
         i -= 1
-    return (output)
+    return roman_int
