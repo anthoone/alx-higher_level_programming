@@ -9,11 +9,14 @@ def roman_to_int(roman_string: str) -> int:
         "D": 500,
         "M" : 1000
     }
+
     if not roman_string or type(roman_string) != str:
         return 0
+
     N = len(roman_string)
     i = N - 1
     output = 0
+
     while i >= 0:
         if i < N - 1 and lookup[roman_string[i]] < lookup[roman_string[i + 1]]:
             output -= lookup[roman_string[i]]
