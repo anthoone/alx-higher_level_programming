@@ -9,7 +9,6 @@ def roman_to_int(roman_string):
         "D": 500,
         "M" : 1000,
     }
-
     N = len(roman_string)
     i = N - 1
     output = 0
