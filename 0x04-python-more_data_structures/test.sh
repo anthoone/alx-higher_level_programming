@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python 12-main.py
+python 100-main.py
